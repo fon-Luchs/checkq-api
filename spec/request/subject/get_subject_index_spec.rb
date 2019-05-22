@@ -10,7 +10,7 @@ RSpec.describe 'GetChatIndex', type: :request do
       {
         'id' => s.id,
         'name' => s.name,
-        'question_count' => 777,
+        'question_count' => s.questions.count,
         'avatar' => 'http://scp-wiki.wdfiles.com/local--files/scp-003/SCP-003a.jpg'
       }
     end

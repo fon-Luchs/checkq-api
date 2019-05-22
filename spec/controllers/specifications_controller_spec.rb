@@ -5,17 +5,8 @@ RSpec.describe SpecificationsController, type: :controller do
     it { should route(:get, '/specifications').to(action: :show, controller: 'specifications') }
   end
 
-  let(:headers) do
-    {
-      'Content-type' => 'application/json',
-      'Accept' => 'application/json'
-    }
-  end
-
   describe '#index.json' do
-    before { merge_headers headers }
-
-    before { get :show, format: :json }
+    before { get :show }
 
     it { should render_template :show }
   end
