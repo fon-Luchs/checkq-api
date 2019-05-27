@@ -4,6 +4,14 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
 
     resource 'api/subjects',
       headers: :any,
-      methods: [:get, :post, :put, :patch, :delete, :options, :head]
+      methods: :get
+  end
+
+  allow do
+    origins '*'
+
+    resource 'api/profile',
+      headers: :any,
+      methods: :post
   end
 end

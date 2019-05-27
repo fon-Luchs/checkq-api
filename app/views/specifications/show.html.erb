@@ -9,3 +9,33 @@
               'Accept' => 'application/json'
           };
 </h3>
+
+<h2>
+  PROFILE
+</h2>
+
+<h3>
+  path: 'POST api/profile';
+  headers: {
+              'Content-type' => 'application/json',
+              'Accept' => 'application/json'
+           };
+  params: {
+            user: { :email, :password, :password_confirmation }
+          }
+</h3>
+
+<h2>
+  SESSION
+</h2>
+
+<h3>
+  path: 'POST api/subjects';
+  headers: {
+              'Content-type' => 'application/json',
+              'Accept' => 'application/json'
+           };
+  params: {
+            session: { :email, :password }
+          }
+</h3>
