@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
 
   helper_method :collection, :resource, :current_user
 
+  skip_before_action :verify_authenticity_token, if: -> { request.format.json? }
+
   rescue_from ActionController::ParameterMissing do |exception|
     @exception = exception
 
