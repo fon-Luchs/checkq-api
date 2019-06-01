@@ -6,6 +6,7 @@ class QuestionDecorator < ApplicationDecorator
   def as_json(*args)
     {
       id: object.id,
+      rate: object.rate,
       question: object.name,
       options: answers.as_json
     }

@@ -1,4 +1,6 @@
 class Task::TestGenerator
+  include ActiveModel::Validations
+
   def initialize(args = {})
     args ||= {}
 
@@ -7,8 +9,14 @@ class Task::TestGenerator
     @question_count = args[:question_count]
   end
 
+  validate do |model|
+    model.errors.add :question_count, 'is invalid' if invalid_question_count?
+
+    model.errors.add :subject, 'is not found in this life' if subjects.any?(&:nil?)
+  end
+
   def save
-    # false unless valid?
+    return false unless valid?
 
     subjects && true
   end
@@ -20,26 +28,16 @@ class Task::TestGenerator
   private
 
   def question_parser
-    increment = 0
-    count = 0
-    loop do
-      if (@question_count % (@subject_ids.size + increment)).zero?
-        count = @question_count / (@subject_ids.size + increment)
-        break
-      end
-      increment += 1
-    end
-
-    subjects.map do |subject|
-      subject.questions.order(rate: :asc).first(100).map do |question|
-        question.decorate.as_json
-      end
-    end
+    Task::QuestionParser.parse(@question_count, subjects)
   end
 
   def subjects
     @subjects ||= []
-    @subject_ids.each { |id| @subjects << Subject.find(id) } if @subjects.size.zero?
+    @subject_ids.each { |id| @subjects << Subject.find_by(id: id) } if @subjects.size.zero?
     @subjects
+  end
+
+  def invalid_question_count?
+    @question_count < @subject_ids.size && @question_count >= 60
   end
 end

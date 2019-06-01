@@ -3,7 +3,7 @@ class Api::TestsController < BaseController
 
   private
 
-  def builde_resource
+  def build_resource
     @task = Task::TestGenerator.new(resource_params)
   end
 
@@ -12,6 +12,6 @@ class Api::TestsController < BaseController
   end
 
   def resource_params
-    params.require(:test).permit(:subject_ids, :question_count)
+    params.require(:test).permit(:question_count, :subject_ids => [])
   end
 end
