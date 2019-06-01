@@ -12,6 +12,6 @@ class Api::TestsController < BaseController
   end
 
   def resource_params
-    params.require(:test).permit(:question_count, :subject_ids => [])
+    params.require(:test).permit(:question_count, subject_ids: [])
   end
 end

@@ -6,7 +6,7 @@ class Task::TestGenerator
 
     @subject_ids = args[:subject_ids]
 
-    @question_count = args[:question_count]
+    @question_count = args[:question_count].to_i
   end
 
   validate do |model|
