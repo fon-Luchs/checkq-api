@@ -3,7 +3,9 @@ class Question < ApplicationRecord
 
   has_many :answers
 
+  has_one :question_answer
+
   validates :name, presence: true
 
-  validates :name, length: { maximum: 250 }
+  validates :name, length: { maximum: 4500 }
 end

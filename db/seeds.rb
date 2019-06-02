@@ -1,3 +1,1 @@
-Subject.create name: 'Алгебра та геометрія'
-Subject.create name: 'Програмування'
-
+DataBase::Seeder.seed
