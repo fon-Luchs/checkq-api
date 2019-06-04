@@ -448,11 +448,11 @@ class Subject::AigParsedJson
           "answers": [
             {
               "index": 1,
-              "title": "$5$"
+              "title": "$\\begin{pmatrix} 1& -1& 2 \\\\ 2& -2 & 4 \\\\ 3 &-3 & 6 \\end{pmatrix}$"
             },
             {
               "index": 2,
-              "title": "$\\begin{pmatrix} 1& -1& 2 \\\\ 2& -2 & 4 \\\\ 3 &-3 & 6 \\end{pmatrix}$"
+              "title": "$5$"
             },
             {
               "index": 3,

@@ -1,6 +1,6 @@
 class BaseController < ApplicationController
   def create
-    render :errors unless resource.save
+    render :errors, status: 409 unless resource.save
   end
 
   def destroy
@@ -9,6 +9,6 @@ class BaseController < ApplicationController
   end
 
   def update
-    render :errors unless resource.update(resource_params)
+    render :errors, status: 409 unless resource.update(resource_params)
   end
 end

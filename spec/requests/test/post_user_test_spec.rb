@@ -20,7 +20,7 @@ RSpec.describe 'PostUserTest', type: :request do
   end
 
   let(:subject_answers) do
-    
+
   end
 
   let(:resource_response) do

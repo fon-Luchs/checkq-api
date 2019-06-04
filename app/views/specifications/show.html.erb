@@ -54,3 +54,14 @@
             test: { :subject_ids, :question_count }
           }
 </h3>
+
+<h3>
+  path: 'POST api/answer';
+  headers: {
+              'Content-type' => 'application/json',
+              'Accept' => 'application/json'
+           };
+  params: {
+            answer: { result: [{ :id, :answer_id }] }
+          }
+</h3>

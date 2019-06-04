@@ -19,5 +19,11 @@ FactoryBot.define do
     trait :with_subject do
       association :subject
     end
+
+    trait :with_answer do
+      after :create do |question|
+        create :answer, question: question
+      end
+    end
   end
 end

@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
 
     resource :test, only: :create
+
+    resource :answer, only: :create
   end
 
   resource :specifications, only: :show
