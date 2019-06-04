@@ -1,10 +1,9 @@
 class Answer::AnalystCollection
   def self.collect(arr)
     arr.each do |result|
-      answer = Answer.find(result[:answer_id])
       question = Question.find(result[:id])
 
-      if QuestionAnswer.find_by(answer: answer, question: question).nil?
+      if QuestionAnswer.find_by(answer_id: result[:answer_id], question: question).nil?
         question.increment!(:fail_atempts, coef)
       else
         question.increment!(:success_atempts, coef)

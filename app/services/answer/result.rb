@@ -40,7 +40,11 @@ class Answer::Result
 
   def answers
     @answers ||= []
-    @result.each { |e| @answers << Answer.find_by(id: e[:answer_id]) } if @answers.size.zero?
+    @result.each do |e|
+      next if e[:answer_id].nil?
+
+      @answers << Answer.find_by(id: e[:answer_id]) if @answers.size.zero?
+    end
     @answers
   end
 

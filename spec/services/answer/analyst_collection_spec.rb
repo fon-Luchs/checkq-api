@@ -14,13 +14,11 @@ RSpec.describe Answer::AnalystCollection do
   subject { Answer::AnalystCollection }
 
   describe '#collect#true' do
-    before { expect(Answer).to receive(:find).with(answer.id).and_return(answer) }
-
     before { expect(Question).to receive(:find).with(question.id).and_return(question) }
 
     before do
       expect(QuestionAnswer).to receive_message_chain(:find_by, :nil?)
-        .with(answer: answer, question: question)
+        .with(answer_id: answer.id, question: question)
         .with(no_args)
         .and_return(false)
     end
@@ -31,13 +29,11 @@ RSpec.describe Answer::AnalystCollection do
   end
 
   describe '#collect#false' do
-    before { expect(Answer).to receive(:find).with(answer.id).and_return(answer) }
-
     before { expect(Question).to receive(:find).with(question.id).and_return(question) }
 
     before do
       expect(QuestionAnswer).to receive_message_chain(:find_by, :nil?)
-        .with(answer: answer, question: question)
+        .with(answer_id: answer.id, question: question)
         .with(no_args)
         .and_return(true)
     end
