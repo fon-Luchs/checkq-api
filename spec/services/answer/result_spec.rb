@@ -52,11 +52,7 @@ RSpec.describe Answer::Result do
   end
 
   describe '#to_json' do
-    let(:result) { double }
-
-    before { expect(Answer::AnswerChecker).to receive(:check).with(params[:result]).and_return(result) }
-
-    before { expect(result).to receive(:map).and_return(['res'])}
+    before { expect(subject).to receive_message_chain(:decorated_result, :to_json).and_return(['res']) }
 
     its(:to_json) { should eq ['res'] }
   end

@@ -24,10 +24,12 @@ RSpec.describe 'PostUserTestResult', type: :request do
   end
 
   let(:resource_response) do
-    {
-      'id' => question.id,
-      'id_answer' => answer.id
-    }
+    [
+      {
+        'id' => question.id,
+        'id_answer' => answer.id
+      }
+    ]
   end
 
   let(:permitted_params) { permit_params! params, :answer }

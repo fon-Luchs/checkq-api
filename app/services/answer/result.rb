@@ -2,8 +2,6 @@ class Answer::Result
   include ActiveModel::Validations
 
   def initialize(args = {})
-    args ||= {}
-
     @result = args[:result]
   end
 
@@ -18,15 +16,21 @@ class Answer::Result
   end
 
   def to_json(*args)
-    find_results.map do |a|
-      a.decorate.to_json
-    end
+    decorated_result.to_json
   end
 
   private
 
   def results
     analitic && find_results
+  end
+
+  def decorated_result
+    @arr_result = []
+    find_results.map do |a|
+      @arr_result << a.decorate
+    end
+    @arr_result
   end
 
   def find_results
