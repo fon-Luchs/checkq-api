@@ -38,6 +38,6 @@ class Task::TestGenerator
   end
 
   def invalid_question_count?
-    @question_count < @subject_ids.size || @question_count >= 60
+    @question_count < @subject_ids.size || @question_count > 60
   end
 end

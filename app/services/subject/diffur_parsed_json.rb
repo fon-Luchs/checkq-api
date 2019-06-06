@@ -138,7 +138,7 @@ class Subject::DiffurParsedJson
             },
             {
               "index": 4,
-              "title": "y^3dy+\\cfrac {y}{ x}dx=-\\ln x dx$"
+              "title": "$y^3dy+\\cfrac {y}{ x}dx=-\\ln x dx$"
             }
           ],
           "checked": true
@@ -161,7 +161,7 @@ class Subject::DiffurParsedJson
             },
             {
               "index": 4,
-              "title": "y'+2xy=y$"
+              "title": "$y'+2xy=y$"
             }
           ],
           "checked": true
@@ -184,10 +184,10 @@ class Subject::DiffurParsedJson
             },
             {
               "index": 4,
-              "title": "y'+2y=e^x$"
+              "title": "$y'+2y=e^x$"
             }
           ],
-          "checked": false
+          "checked": true
         },
         {
           "question": "Рівняння $M(x,y)dy+N(x,y)dx=0$ є рівнянням у повних диференціалах в однозв'язній області $\\Omega\\sube R^2 $тоді й тільки тоді, коли",
@@ -203,7 +203,7 @@ class Subject::DiffurParsedJson
             },
             {
               "index": 3,
-              "title": "\\cfrac{\\partial M(x,y)}{ \\partial x} \\equiv \\cfrac{\\partial N(x,y)}{ \\partial y}$"
+              "title": "$\\cfrac{\\partial M(x,y)}{ \\partial x} \\equiv \\cfrac{\\partial N(x,y)}{ \\partial y}$"
             },
             {
               "index": 4,
@@ -256,7 +256,7 @@ class Subject::DiffurParsedJson
               "title": "$y=\\cos^2 x-3\\sin x$"
             }
           ],
-          "checked": false
+          "checked": true
         },
         {
           "question": "Яке з наведених диференціальних рівнянь є лінійним однорідним:",

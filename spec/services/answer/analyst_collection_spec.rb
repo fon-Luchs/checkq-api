@@ -16,6 +16,8 @@ RSpec.describe Answer::AnalystCollection do
   describe '#collect#true' do
     before { expect(Question).to receive(:find).with(question.id).and_return(question) }
 
+    before { expect(question).to receive(:increment!).with(:rolls_count, coef).and_return(true) }
+
     before do
       expect(QuestionAnswer).to receive_message_chain(:find_by, :nil?)
         .with(answer_id: answer.id, question: question)
@@ -25,11 +27,15 @@ RSpec.describe Answer::AnalystCollection do
 
     before { expect(question).to receive(:increment!).with(:success_atempts, coef).and_return(true) }
 
+    before { expect(question).to receive(:touch).and_return(true) }
+
     it { expect { subject.collect(params) }.to_not raise_error }
   end
 
   describe '#collect#false' do
     before { expect(Question).to receive(:find).with(question.id).and_return(question) }
+
+    before { expect(question).to receive(:increment!).with(:rolls_count, coef).and_return(true) }
 
     before do
       expect(QuestionAnswer).to receive_message_chain(:find_by, :nil?)
@@ -39,6 +45,8 @@ RSpec.describe Answer::AnalystCollection do
     end
 
     before { expect(question).to receive(:increment!).with(:fail_atempts, coef).and_return(true) }
+
+    before { expect(question).to receive(:touch).and_return(true) }
 
     it { expect { subject.collect(params) }.to_not raise_error }
   end

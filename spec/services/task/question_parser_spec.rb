@@ -19,9 +19,7 @@ RSpec.describe Task::QuestionParser do
 
       before { expect(subject).to receive(:questions).and_return(questions) }
 
-      before do
-        expect(questions).to receive_message_chain(:flatten!, :sort_by!, :reverse!)
-      end
+      before { expect(questions).to receive(:shuffle).and_return(questions) }
 
       it { expect(subject.parse(count, subjects)).to eq questions }
     end

@@ -1,4 +1,4 @@
-class Subject::TerverParsedJson
+class Subject::DiscretParsedJson
   def self.as_json(*args)
     {
       "subject": "Теорія ймовірності",

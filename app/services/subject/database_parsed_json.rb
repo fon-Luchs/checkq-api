@@ -282,7 +282,7 @@ class Subject::DatabaseParsedJson
           "checked": true
         },
         {
-          "question": "Що мыстить у собы архытектура ANSI/SPARC?",
+          "question": "Що містить у собы архітектура ANSI/SPARC?",
           "index": 13,
           "answers": [
             {

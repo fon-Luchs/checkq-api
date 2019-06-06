@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_02_200944) do
+ActiveRecord::Schema.define(version: 2019_06_06_110550) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2019_06_02_200944) do
     t.integer "success_atempts", default: 0
     t.integer "fail_atempts", default: 0
     t.integer "rate", default: 0
+    t.integer "rolls_count", default: 0
     t.index ["subject_id"], name: "index_questions_on_subject_id"
   end
 

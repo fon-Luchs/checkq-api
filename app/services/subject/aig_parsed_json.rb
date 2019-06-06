@@ -328,12 +328,12 @@ class Subject::AigParsedJson
           "checked": true
         },
         {
-          "question": "Стовпці $a, b, c, d \\:4\\times 4$ –матриці А змінили за правилом $a, c, d, b$. детермінант матриці $А$:",
+          "question": "Стовпці $a, b, c, d \\:4\\times 4$ –матриці $A$ змінили за правилом $a, c, d, b$. детермінант матриці $A$:",
           "index": 15,
           "answers": [
             {
               "index": 1,
-              "title": "не змінився"
+              "title": "не змінився A"
             },
             {
               "index": 2,
@@ -351,7 +351,7 @@ class Subject::AigParsedJson
           "checked": true
         },
         {
-          "question": "Якщо $А, В$ – квадратні матриці $n$-го порядку, $k$ – число, то завжди",
+          "question": "Якщо $A, B$ – квадратні матриці $n$-го порядку, $k$ – число, то завжди",
           "index": 16,
           "answers": [
             {
@@ -604,7 +604,7 @@ class Subject::AigParsedJson
           "checked": true
         },
         {
-          "question": "Кожна з матриць $А$ та $В$ має нульовий детермінант, тоді нульовий детермінант завжди має матриця",
+          "question": "Кожна з матриць $A$ та $B$ має нульовий детермінант, тоді нульовий детермінант завжди має матриця",
           "index": 27,
           "answers": [
             {
@@ -613,15 +613,15 @@ class Subject::AigParsedJson
             },
             {
               "index": 2,
-              "title": "$А+В$"
+              "title": "$A+B$"
             },
             {
               "index": 3,
-              "title": "$А-В$"
+              "title": "$A-B$"
             },
             {
               "index": 4,
-              "title": "$2(А+В)$"
+              "title": "$2(A+B)$"
             }
           ],
           "checked": true
@@ -673,7 +673,7 @@ class Subject::AigParsedJson
           "checked": true
         },
         {
-          "question": "Нехай $А, В$ є, відповідно, матриця-рядок і матриця-стовпець із $3$ чисел. Тоді невизначеними є добуток",
+          "question": "Нехай $A, B$ є, відповідно, матриця-рядок і матриця-стовпець із $3$ чисел. Тоді невизначеними є добуток",
           "index": 30,
           "answers": [
             {
@@ -696,7 +696,7 @@ class Subject::AigParsedJson
           "checked": true
         },
         {
-          "question": "Нехай $А, В$ – квадратні матриці $n$-го порядку, причому, $А$ – особлива матриця. Тоді завжди особливою є матриця",
+          "question": "Нехай $A, B$ – квадратні матриці $n$-го порядку, причому, $A$ – особлива матриця. Тоді завжди особливою є матриця",
           "index": 31,
           "answers": [
             {
@@ -705,11 +705,11 @@ class Subject::AigParsedJson
             },
             {
               "index": 2,
-              "title": "$А+В$"
+              "title": "$A+B$"
             },
             {
               "index": 3,
-              "title": "$А-В$"
+              "title": "$A-B$"
             },
             {
               "index": 4,
@@ -742,7 +742,7 @@ class Subject::AigParsedJson
           "checked": true
         },
         {
-          "question": "При множенні $2\\times 2$   - матриці $А$ зліва на матрицю $\\begin{pmatrix} 1& 0 \\\\ 0& 2\\end{pmatrix}$  , тобто $\\begin{pmatrix} 1& 0 \\\\ 0& 2\\end{pmatrix}A$  , в матриці $А$…",
+          "question": "При множенні $2\\times 2$   - матриці $A$ зліва на матрицю $\\begin{pmatrix} 1& 0 \\\\ 0& 2\\end{pmatrix}$  , тобто $\\begin{pmatrix} 1& 0 \\\\ 0& 2\\end{pmatrix}A$  , в матриці $A$…",
           "index": 33,
           "answers": [
             {
@@ -811,7 +811,7 @@ class Subject::AigParsedJson
           "checked": true
         },
         {
-          "question": "Множення комплексних чисел на мниме число $i$ реалізує наступне перетворення координатної площини",
+          "question": "Множення комплексних чисел на уявне число $i$ реалізує наступне перетворення координатної площини",
           "index": 36,
           "answers": [
             {
@@ -1077,7 +1077,7 @@ class Subject::AigParsedJson
             },
             {
               "index": 3,
-              "title": "0$"
+              "title": "$ 0$"
             },
             {
               "index": 4,

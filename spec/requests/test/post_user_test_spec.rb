@@ -3,42 +3,44 @@ require 'rails_helper'
 RSpec.describe 'PostUserTest', type: :request do
   let(:headers)     { { 'Content-type' => 'application/json', 'Accept' => 'application/json' } }
 
-  let(:subjects)    { create_list(:subject, 2, :with_questions) }
+  let(:subj)        { create(:subject) }
 
-  let(:count)       { 4 }
+  let(:count)       { 1 }
 
-  let(:task)        { Task::TestGenerator.new(subject_ids: subjects.map(&:id), question_count: count) }
+  let(:task)        { Task::TestGenerator.new(subject_ids: [subj.id], question_count: count) }
+
+  let(:question)    { create(:question, :with_answers, subject: subj) }
 
   let(:params) do
     {
       test:
       {
         question_count: count.to_s,
-        subject_ids: subjects.map(&:id).map(&:to_s)
+        subject_ids: [subj.id.to_s]
       }
     }
   end
 
-  let(:subject_answers) do
-
+  let(:answer_response) do
+    question.answers.map do |a|
+      {
+        'id' => a.id,
+        'title' => a.name
+      }
+    end
   end
 
   let(:resource_response) do
-    subjects.map do |element|
-      element.questions.order(rate: :asc).first(count / subjects.size).map do |q|
+    subj.questions.map do |q|
+      [
         {
           'id' => q.id,
+          'options' => answer_response,
           'question' => q.name,
-          'rate' => q.rate,
-          'options' => q.answers.map do |a|
-                         {
-                           'id' => a.id,
-                           'title' => a.name
-                         }
-                       end
+          'rate' => q.rate
         }
-      end
-    end.flatten.sort_by!{ |h| h['rate'] }.reverse!
+      ]
+    end
   end
 
   let(:permitted_params) { permit_params! params, :test }

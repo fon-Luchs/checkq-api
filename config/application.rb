@@ -20,6 +20,9 @@ Bundler.require(*Rails.groups)
 module CheckqApi
   class Application < Rails::Application
     config.load_defaults 5.2
+
     config.api_only = true
+
+    config.active_record.observers = :question_observer
   end
 end

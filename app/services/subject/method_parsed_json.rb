@@ -1432,24 +1432,24 @@ class Subject::MethodParsedJson
           "checked": true
         },
         {
-          "question": "Який вигляд має рівняння дотичної, що проведена через точку (x0, f(x0))",
+          "question": "Який вигляд має рівняння дотичної, що проведена через точку $(x_0, f(x_0))$",
           "index": 63,
           "answers": [
             {
               "index": 1,
-              "title": "y-f(x0)=f'(x0)(x-x0)"
+              "title": "$y-f(x_0)=f'(x_0)(x-x_0)$"
             },
             {
               "index": 2,
-              "title": "y-f'(x0)=f(x0)(x-x0)"
+              "title": "$y-f'(x_0)=f(x_0)(x-x_0)$"
             },
             {
               "index": 3,
-              "title": "y=f'(x0)(x-x0)"
+              "title": "$y=f'(x_0)(x-x_0)$"
             },
             {
               "index": 4,
-              "title": "y-f'(x0)=x-x0"
+              "title": "$y-f'(x-0)=x-x_0$"
             }
           ],
           "checked": true

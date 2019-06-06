@@ -20,6 +20,12 @@ class DataBase::Seeder
 
     arr << Subject::MethodParsedJson.as_json
 
+    arr << Subject::DiscretParsedJson.as_json
+
+    arr << Subject::MathAnalParsedJson.as_json
+
+    arr << Subject::ProgParsedJson.as_json
+
     arr << Subject::TerverParsedJson.as_json
   end
 
