@@ -25,5 +25,12 @@ FactoryBot.define do
         create :answer, question: question
       end
     end
+
+    trait :with_correct_answer do
+      after :create do |question|
+        create :answer, question: question
+        create :question_answer, question: question, answer: question.answers.first
+      end
+    end
   end
 end

@@ -11,7 +11,5 @@ RSpec.describe SubjectDecorator do
     its([:name]) { sub.name }
 
     its([:question_count]) { sub.questions.count }
-
-    its([:avatar])         { 'http://scp-wiki.wdfiles.com/local--files/scp-003/SCP-003a.jpg' }
   end
 end

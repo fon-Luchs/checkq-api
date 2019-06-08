@@ -126,7 +126,7 @@ class Subject::DiffurParsedJson
           "answers": [
             {
               "index": 1,
-              "title": "$(y^3+\\ln x)dy=\\cfrac {y}{ x}dx$"
+              "title": "$y^3dy+\\cfrac {y}{ x}dx=-\\ln x dx$"
             },
             {
               "index": 2,
@@ -138,7 +138,7 @@ class Subject::DiffurParsedJson
             },
             {
               "index": 4,
-              "title": "$y^3dy+\\cfrac {y}{ x}dx=-\\ln x dx$"
+              "title": "$(y^3+\\ln x)dy=\\cfrac {y}{ x}dx$"
             }
           ],
           "checked": true
@@ -172,7 +172,7 @@ class Subject::DiffurParsedJson
           "answers": [
             {
               "index": 1,
-              "title": "$xdy=(y+x)dx$"
+              "title": "$(2x+1)dy=(2y+4x)dx$"
             },
             {
               "index": 2,
@@ -180,7 +180,7 @@ class Subject::DiffurParsedJson
             },
             {
               "index": 3,
-              "title": "$(2x+1)dy=(2y+4x)dx$"
+              "title": "$xdy=(y+x)dx$"
             },
             {
               "index": 4,
@@ -195,7 +195,7 @@ class Subject::DiffurParsedJson
           "answers": [
             {
               "index": 1,
-              "title": "$\\cfrac{\\partial M(x,y)}{ \\partial y} \\equiv \\cfrac{\\partial N(x,y)}{ \\partial x}$"
+              "title": "$\\cfrac{\\partial M(x,y)}{ \\partial x} \\equiv \\cfrac{\\partial N(x,y)}{ \\partial y}$"
             },
             {
               "index": 2,
@@ -203,7 +203,7 @@ class Subject::DiffurParsedJson
             },
             {
               "index": 3,
-              "title": "$\\cfrac{\\partial M(x,y)}{ \\partial x} \\equiv \\cfrac{\\partial N(x,y)}{ \\partial y}$"
+              "title": "$\\cfrac{\\partial M(x,y)}{ \\partial y} \\equiv \\cfrac{\\partial N(x,y)}{ \\partial x}$"
             },
             {
               "index": 4,
@@ -241,7 +241,7 @@ class Subject::DiffurParsedJson
           "answers": [
             {
               "index": 1,
-              "title": "$y=\\sin^2x$"
+              "title": "$y=\\sin x -5 \\cos x$"
             },
             {
               "index": 2,
@@ -249,7 +249,7 @@ class Subject::DiffurParsedJson
             },
             {
               "index": 3,
-              "title": "$y=\\sin x -5 \\cos x$"
+              "title": "$y=\\sin^2x$"
             },
             {
               "index": 4,
@@ -310,11 +310,11 @@ class Subject::DiffurParsedJson
           "answers": [
             {
               "index": 1,
-              "title": "П'ятий"
+              "title": "Третій"
             },
             {
               "index": 2,
-              "title": "Третій"
+              "title": "П'ятий"
             },
             {
               "index": 3,

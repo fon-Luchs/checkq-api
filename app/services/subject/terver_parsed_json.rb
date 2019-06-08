@@ -213,7 +213,7 @@ class Subject::TerverParsedJson
           "checked": true
         },
         {
-          "question": "Двічі подкидають ігральний кубик. Кількість елементарних наслідків такого випадкового експеременту дорівнює...",
+          "question": "Двічі підкидають гральний кубик. Кількість елементарних наслідків такого випадкового експеременту дорівнює...",
           "index": 10,
           "answers": [
             {
@@ -333,11 +333,11 @@ class Subject::TerverParsedJson
           "answers": [
             {
               "index": 1,
-              "title": "$A \\supseteq B$"
+              "title": "$A \\subseteq B$"
             },
             {
               "index": 2,
-              "title": "$A \\subseteq B$"
+              "title": "$A \\supseteq B$"
             },
             {
               "index": 3,
@@ -747,11 +747,11 @@ class Subject::TerverParsedJson
           "answers": [
             {
               "index": 1,
-              "title": "$\\lim\\limits_{x\\to+\\infin} F(x,y)=P\\{\\xi\\ge х\\}$"
+              "title": "$\\lim\\limits_{x\\to+\\infin} F(x,y)=P\\{\\xi<х\\}$"
             },
             {
               "index": 2,
-              "title": "$\\lim\\limits_{x\\to+\\infin} F(x,y)=P\\{\\xi<х\\}$"
+              "title": "$\\lim\\limits_{x\\to+\\infin} F(x,y)=P\\{\\xi\\ge х\\}$"
             },
             {
               "index": 3,
@@ -1092,11 +1092,11 @@ class Subject::TerverParsedJson
           "answers": [
             {
               "index": 1,
-              "title": "$P(\\xi=k)=1/6\\cdot(5/6)^k, k=1,2,\\dots$"
+              "title": "$P(\\xi=k)=1/6\\cdot(5/6)^{k-1}, k=1,2,\\dots$"
             },
             {
               "index": 2,
-              "title": "$P(\\xi=k)=1/6\\cdot(5/6)^{k-1}, k=1,2,\\dots$"
+              "title": "$P(\\xi=k)=1/6\\cdot(5/6)^k, k=1,2,\\dots$"
             },
             {
               "index": 3,
@@ -1242,7 +1242,7 @@ class Subject::TerverParsedJson
             },
             {
               "index": 4,
-              "title": "$P\\{a\\le \\xi\\le c\\}\\ge \\int\\limits_{a}^{b}f(x), a<c<b$"
+              "title": "$P\\{a\\le \\xi\\le c\\}\\ge \\int\\limits_{a}^{b}f(x), a<c\\le b$"
             }
           ],
           "checked": true

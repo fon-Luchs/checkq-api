@@ -563,7 +563,7 @@ class Subject::AigParsedJson
           "answers": [
             {
               "index": 1,
-              "title": "$(AB)^{-1} = B^{-1}A^{-1}$"
+              "title": "$(AB)^{-1} = A^{-1} B^{-1}$"
             },
             {
               "index": 2,
@@ -571,7 +571,7 @@ class Subject::AigParsedJson
             },
             {
               "index": 3,
-              "title": "$(AB)^{-1} = A^{-1} B^{-1}$"
+              "title": "$(AB)^{-1} = B^{-1}A^{-1}$"
             },
             {
               "index": 4,

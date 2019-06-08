@@ -5,7 +5,7 @@ RSpec.describe SpecificationsController, type: :controller do
     it { should route(:get, '/specifications').to(action: :show, controller: 'specifications') }
   end
 
-  describe '#index.json' do
+  describe '#show.json' do
     before { get :show }
 
     it { should render_template :show }

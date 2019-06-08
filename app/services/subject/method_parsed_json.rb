@@ -103,7 +103,7 @@ class Subject::MethodParsedJson
           "answers": [
             {
               "index": 1,
-              "title": "$|R|\\le \\frac{|f^{n+1}|\\omega}{(n+1)!}$"
+              "title": "$|R|\\le \\frac{|f^{n+1}||\\omega|}{(n+1)!}$"
             },
             {
               "index": 2,
@@ -115,7 +115,7 @@ class Subject::MethodParsedJson
             },
             {
               "index": 4,
-              "title": "$|R|\\le \\frac{|f^{n+1}||\\omega|}{(n+1)!}$"
+              "title": "$|R|\\le \\frac{|f^{n+1}|\\omega}{(n+1)!}$"
             }
           ],
           "checked": true

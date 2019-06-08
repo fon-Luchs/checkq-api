@@ -1,224 +1,293 @@
 class Subject::DiscretParsedJson
   def self.as_json(*args)
     {
-      "subject": "Теорія ймовірності",
-      "count": 63,
+      "subject": "Дискретна математика",
+      "count": 70,
       "checked": true,
       "questions": [
         {
-          "question": "Нехай $A, B, C$ - три деякі випадкові події. Яка з наданих нижче подій дорівнює ($A\\cup B)\\cap C$",
+          "question": "Яке з настуних тверджень є вірним для довільних множин $А, В$",
           "index": 1,
           "answers": [
             {
               "index": 1,
-              "title": "$(A \\cap C)\\cup(B \\cap C)$"
+              "title": "$А=А \\cap (А \\cup В)$"
             },
             {
               "index": 2,
-              "title": "$(A\\cup C)\\cup(B \\cap C)$"
+              "title": "$В=А \\cup (А \\cup В)$"
             },
             {
               "index": 3,
-              "title": "$(A \\cap C)\\cup(B \\cup C)$"
+              "title": "$А=А \\cup (А \\cup В)$"
             },
             {
               "index": 4,
-              "title": "$(A \\cup C)\\cap(B \\cup C)$"
+              "title": "$В=А \\cap (А \\cup В)$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Яке з наведених нижче тверджень вірне, якщо $P(A \\cap B)=0$ і $P(A)\\ne 0, P(B)\\ne0$",
+          "question": "Яке з настуних тверджень є вірним для довільних множин $А, В$",
           "index": 2,
           "answers": [
             {
               "index": 1,
-              "title": "події A і B несумісні"
+              "title": "$А \\supe А \\cap (А \\cup В)$"
             },
             {
               "index": 2,
-              "title": "події A і B сумісні"
+              "title": "$В \\supe А \\cup (А \\cup В)$"
             },
             {
               "index": 3,
-              "title": "події A і B неможливі"
+              "title": "$В \\supe А \\cap (А \\cup В)$"
             },
             {
               "index": 4,
-              "title": "події A і B незалежні"
+              "title": "$А \\supe А \\cup (А \\cup В)$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Яке з наведених нижче тверджень вірне, якщо A і B - дві деякі несумісні події $P(A)\\ne 0, P(B)\\ne 0$",
+          "question": "Яке з наступних тверджень  законом дистрибутивності?",
           "index": 3,
           "answers": [
             {
               "index": 1,
-              "title": "$P(A \\cup B)=P(A)+P(B)$"
+              "title": "$(А \\cup В)\\cap С = (А \\cap С) \\cup (В \\cap С)$"
             },
             {
               "index": 2,
-              "title": "$P(A \\setminus B)=P(A)-P(B)$"
+              "title": "$\\overline{(А \\cup В)}= \\overline А \\cap \\overline В$"
             },
             {
               "index": 3,
-              "title": "$P(A \\cap B)=P(A)+P(B)$"
+              "title": "$(А \\cup В) \\cup С = А \\cup (В \\cup С)$"
             },
             {
               "index": 4,
-              "title": "$P(A \\cap B)=P(A)P(B)$"
+              "title": "$А = А \\cap (А \\cup В)$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Яке з наведених нижче тверджень вірне, якщо A і B - дві деякі незалежні події $P(A)\\ne 0, P(B)\\ne 0$?",
+          "question": "Яке з наступних тверджень є законом асоціативності?",
           "index": 4,
           "answers": [
             {
               "index": 1,
-              "title": "$P(A \\cup B)=P(A)+P(B)-P(A)*P(B)$"
+              "title": "$(А \\cup В) \\cup С = А \\cup (В \\cup С)$"
             },
             {
               "index": 2,
-              "title": "$P(A \\cap B)=0$"
+              "title": "$(А \\cup В)\\cap С = (А \\cap С) \\cup (В \\cap С)$"
             },
             {
               "index": 3,
-              "title": "$P(A\\setminus B)\\ne P(A)$"
+              "title": "$А = А \\cap (А \\cup В)$"
             },
             {
               "index": 4,
-              "title": "$P(A\\setminus B)\\ne P(B)$"
+              "title": "$\\overline{(А \\cup В)}= \\overline А \\cap\\overline В$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Нехай події $H_1$ і $H_2$ такі, що $H_1 \\cap H_2=\\varnothing$ і $P(A)=P(A/H_1)P(H_1)+P(A/H_2)P(H_2), A$ - довільна подія. Яке з наведених нижче сполучень значень $P(H_1)$ і $P(H_2)$ вірне?",
+          "question": "Яке з наступних тверджень є законом поглинання?",
           "index": 5,
           "answers": [
             {
               "index": 1,
-              "title": "$P(H_1)=1/5$ і $P(H_2)=4/5$"
+              "title": "$А = А \\cap (А \\cup В)$"
             },
             {
               "index": 2,
-              "title": "$P(H_1)=1/3$ і $P(H_2)=1/3$"
+              "title": "$(А \\cup В)\\cap С = (А \\cap С) \\cup (В \\cap С)$"
             },
             {
               "index": 3,
-              "title": "$P(H_1)=2/3$ і $P(H_2)=2/3$"
+              "title": "$(А \\cup В) \\cup С = А \\cup (В \\cup С)$"
             },
             {
               "index": 4,
-              "title": "$P(H_1)=3/5$ і $P(H_2)=4/7$"
+              "title": "$\\overline{(А \\cup В)}= \\overline А \\cap\\overline В$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Дослід полягає в одночасному підкиданні двох монет. Які з подій $A=(\\text{випало дві решки})$ $B=(\\text{випало два орли})$ $C=(\\text{випали один орел і одна решка})$ рівноможливі?",
+          "question": "Яке з наступних тверджень є правилом де Моргана?",
           "index": 6,
           "answers": [
             {
               "index": 1,
-              "title": "$A, B$"
+              "title": "$\\overline{(А \\cup В)}= \\overline А \\cap\\overline В$"
             },
             {
               "index": 2,
-              "title": "$A, B, C$"
+              "title": "$(А \\cup В)\\cap С = (А \\cap С) \\cup (В \\cap С)$"
             },
             {
               "index": 3,
-              "title": "$A, C$"
+              "title": "$(А \\cup В) \\cup С = А \\cup (В \\cup С)$"
             },
             {
               "index": 4,
-              "title": "$B, C$"
+              "title": "$А = А \\cap (А \\cup В)$"
             }
           ],
           "checked": true
         },
         {
-          "question": "B шкатулці знаходяться три картки з номерами $1,2,3$. Навмання одночасно виймають дві. Імовірність того, що обидва числа виявляться непарними, дорівнює...",
+          "question": "Нехай $А, В$ довільні скінчені множини, при якій умові $|A \\cup B|=|A|+|B|$",
           "index": 7,
           "answers": [
             {
               "index": 1,
-              "title": "$1/3$"
+              "title": "$А \\cap В = \\varnothing$"
             },
             {
               "index": 2,
-              "title": "$1/2$"
+              "title": "$В \\sube А$"
             },
             {
               "index": 3,
-              "title": "$2/3$"
+              "title": "$А \\sube В$"
             },
             {
               "index": 4,
-              "title": "$3/4$"
+              "title": "$А/В= \\varnothing$"
             }
           ],
           "checked": true
         },
         {
-          "question": "У шкатулці містяться три картки з номерами $1,2,3$. навмання виймають по одній без повернення всі три. Імовірність того, що картки з'являться в послідовності $1,2,3$, дорівнює...",
+          "question": "Яке з тверджень є невірним для довільних множин $А, В$",
           "index": 8,
           "answers": [
             {
               "index": 1,
-              "title": "$1/6$"
+              "title": "$|A \\cup B|=|A|+|B|$"
             },
             {
               "index": 2,
-              "title": "$1/3$"
+              "title": "$|A \\cap B|=<|A|+|B|$"
             },
             {
               "index": 3,
-              "title": "$2/3$"
+              "title": "$|A \\cup B|=|A|+|B|-|A \\cap B|$"
             },
             {
               "index": 4,
-              "title": "$5/6$"
+              "title": "$|A \\cup B|=<|A|+|B|$"
             }
           ],
           "checked": true
         },
         {
-          "question": "У межах квадрата із стороною $2$, у центрі якого намальований круг радіуса $1$, навмання вибирають точку. Імовірніть того, що точка потрапить у круг, дорівнює...",
+          "question": "$А \\cap с \\overline А$ дорівнює",
           "index": 9,
           "answers": [
             {
               "index": 1,
-              "title": "$\\pi/4$"
+              "title": "$\\varnothing$"
             },
             {
               "index": 2,
-              "title": "$\\pi/5$"
+              "title": "$\\overline А$"
             },
             {
               "index": 3,
-              "title": "$\\pi/7$"
+              "title": "$А$"
             },
             {
               "index": 4,
-              "title": "$\\pi/8$"
+              "title": "$U$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Двічі подкидають ігральний кубик. Кількість елементарних наслідків такого випадкового експеременту дорівнює...",
+          "question": "$А/\\overline А $ дорівнює",
           "index": 10,
           "answers": [
             {
               "index": 1,
-              "title": "$6^2$"
+              "title": "$А$"
+            },
+            {
+              "index": 2,
+              "title": "$\\overline А$"
+            },
+            {
+              "index": 3,
+              "title": "$\\varnothing $"
+            },
+            {
+              "index": 4,
+              "title": "$U$"
+            }
+          ],
+          "checked": true
+        },
+        {
+          "question": "$А \\oplus \\overline А$ дорівнює",
+          "index": 11,
+          "answers": [
+            {
+              "index": 1,
+              "title": "$U$"
+            },
+            {
+              "index": 2,
+              "title": "$А$"
+            },
+            {
+              "index": 3,
+              "title": "$\\varnothing$"
+            },
+            {
+              "index": 4,
+              "title": "$\\overline А$"
+            }
+          ],
+          "checked": true
+        },
+        {
+          "question": "$\\overline А/А$ дорівнює",
+          "index": 12,
+          "answers": [
+            {
+              "index": 1,
+              "title": "$\\overline А$"
+            },
+            {
+              "index": 2,
+              "title": "$U$"
+            },
+            {
+              "index": 3,
+              "title": "$А$"
+            },
+            {
+              "index": 4,
+              "title": "$\\varnothing$"
+            }
+          ],
+          "checked": true
+        },
+        {
+          "question": "Нехай $А = \\{а \\in N: a$ кратні $ 2, В=\\{ b \\in N: b$ кратні$ 3\\},$ яке з настуаних чисел не належить до $A \\cup B$",
+          "index": 13,
+          "answers": [
+            {
+              "index": 1,
+              "title": "$5$"
             },
             {
               "index": 2,
@@ -226,1230 +295,1322 @@ class Subject::DiscretParsedJson
             },
             {
               "index": 3,
-              "title": "$6C_6^2$"
+              "title": "$2$"
             },
             {
               "index": 4,
-              "title": "$C_6^2$"
+              "title": "$3$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Яке з наведених нижче тверджень вірне, якщо $A$ і $B$ - дві деякі події, $P(A/B)=P(A)-P(B)$ і $P(B)\\ne 0$?",
-          "index": 11,
-          "answers": [
-            {
-              "index": 1,
-              "title": "$B \\subseteq A$"
-            },
-            {
-              "index": 2,
-              "title": "$A \\subseteq B$"
-            },
-            {
-              "index": 3,
-              "title": "$B \\cup A = B$"
-            },
-            {
-              "index": 4,
-              "title": "$B \\cap A = \\varnothing$"
-            }
-          ],
-          "checked": true
-        },
-        {
-          "question": "Для події $A \\cup B$ протилежною є подія",
-          "index": 12,
-          "answers": [
-            {
-              "index": 1,
-              "title": "$\\overline A \\cap \\overline B$"
-            },
-            {
-              "index": 2,
-              "title": "$A \\cap B$"
-            },
-            {
-              "index": 3,
-              "title": "$\\overline A \\cap B$"
-            },
-            {
-              "index": 4,
-              "title": "$\\overline A \\cup \\overline B$"
-            }
-          ],
-          "checked": true
-        },
-        {
-          "question": "Яке з наведених нижче тверджень вірне для будь-яких подій $A$ і $B$?",
-          "index": 13,
-          "answers": [
-            {
-              "index": 1,
-              "title": "$P(A \\cup B)\\ge P(A)$"
-            },
-            {
-              "index": 2,
-              "title": "$P(A \\cup B)<P(B)$"
-            },
-            {
-              "index": 3,
-              "title": "$P(A \\cup B)>P(A)$"
-            },
-            {
-              "index": 4,
-              "title": "$P(A \\cup B)>P(A)+P(B)$"
-            }
-          ],
-          "checked": true
-        },
-        {
-          "question": "Яке з наведених нижче тверджень вірне для будь-яких подій $A$ і $B$?",
+          "question": "Нехай $А = \\{а \\in N: a$ кратні $ 2, В=\\{ b \\in N: b$ кратні$ 3\\},$ яке з настуаних чисел не належить до $A \\cup B$",
           "index": 14,
           "answers": [
             {
               "index": 1,
-              "title": "$P(A \\cap B)\\le P(A)$"
+              "title": "$6$"
             },
             {
               "index": 2,
-              "title": "$P(A \\cap B)<P(B)$"
+              "title": "$5$"
             },
             {
               "index": 3,
-              "title": "$P(A \\cap B)>P(A)$"
+              "title": "$2$"
             },
             {
               "index": 4,
-              "title": "$P(A \\cap B)>P(A)+P(B)$"
+              "title": "$3$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Яке з наведених нижче тверджень вірне для будь-яких подій $A$ і $B$. якщо $P(A \\cap B)=P(A)$",
+          "question": "Нехай $А, В, С$ довільни множини, $(x,y)\\in A \\times (B \\oplus C)$, яке з наступних тверджень є невірним?",
           "index": 15,
           "answers": [
             {
               "index": 1,
-              "title": "$A \\supseteq B$"
+              "title": "$y \\in В \\cap С$"
             },
             {
               "index": 2,
-              "title": "$A \\subseteq B$"
+              "title": "$y \\in В \\oplus С$"
             },
             {
               "index": 3,
-              "title": "$B = \\varnothing$"
+              "title": "$y \\in В \\cup С$"
             },
             {
               "index": 4,
-              "title": "$A = B$"
+              "title": "$x \\in A$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Якщо $\\xi_1, \\xi_2,\\dots,\\xi_n$ - вибірка спостережень над випадковою величиною $\\xi$, то незсуненою оцінкою дисперсії $\\xi$, якщо вона існує, є:",
+          "question": "Нехай $А, В, С$ довільни множини, яке з наступних тверджень є невірним?",
           "index": 16,
           "answers": [
             {
               "index": 1,
-              "title": "$\\frac{1}{n-1}\\sum_{i=1}^{n}(\\xi_i -\\overline\\xi)^2$"
+              "title": "$А/(В/С)=А/(В \\cup С)$"
             },
             {
               "index": 2,
-              "title": "$\\frac{1}{n}\\sum_{i=1}^{n}(\\xi_i -\\overline\\xi)^2$"
+              "title": "$(А/В)/С=А/(В \\cup С)$"
             },
             {
               "index": 3,
-              "title": "$\\frac{1}{n-2}\\sum_{i=1}^{n}(\\xi_i -\\overline\\xi)^2$"
+              "title": "$А \\cap (В/С)=(А \\cap В)/(А \\cap С)$"
             },
             {
               "index": 4,
-              "title": "$\\frac{1}{n+1}\\sum_{i=1}^{n}(\\xi_i -\\overline\\xi)^2$"
+              "title": "$А \\times (В \\cap С)=(А \\times В) \\cap (А \\times С)$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Якщо $\\xi_1, \\xi_2,\\dots,\\xi_n$ - вибірка випадковою величиною $\\xi$, то незсуненою оцінкою математичного сподівання $\\xi$, якщо вона існує, є:",
+          "question": "$Х= \\{1,2,3\\}, p=\\{(1,1), (1,2), (1,3)\\}$ відношення $р$ буде",
           "index": 17,
           "answers": [
             {
               "index": 1,
-              "title": "$\\frac{1}{n}\\sum_{i=0}^{n}(\\xi_i)$"
+              "title": "транзитивним"
             },
             {
               "index": 2,
-              "title": "$\\frac{1}{n-1}\\sum_{i=0}^{n}(\\xi_i)$"
+              "title": "симетричним"
             },
             {
               "index": 3,
-              "title": "$\\frac{1}{n-2}\\sum_{i=0}^{n}(\\xi_i)$"
+              "title": "функціональним"
             },
             {
               "index": 4,
-              "title": "$\\frac{1}{n+1}\\sum_{i=0}^{n}(\\xi_i)$"
+              "title": "рефлексивним"
             }
           ],
           "checked": true
         },
         {
-          "question": "Cпортсмен робить $10$ пострілів по мішені. Ймовірність влучити в \"яблучко \" при одному пострілі дорівнює $0,8$. Кількість влучень описується росподілом",
+          "question": "$Х= \\{1,2,3\\}, p=\\{(1,1), (2,2), (3,3), (3,1)\\}$ відношення р буде",
           "index": 18,
           "answers": [
             {
               "index": 1,
-              "title": "біноміальним"
+              "title": "рефлексивним"
             },
             {
               "index": 2,
-              "title": "геометричним"
+              "title": "симетричним"
             },
             {
               "index": 3,
-              "title": "Пуасона"
+              "title": "функціональним"
             },
             {
               "index": 4,
-              "title": "нормальним"
+              "title": "транзитивним"
             }
           ],
           "checked": true
         },
         {
-          "question": "Яке з наведених нижче сполучень значень $n$ і $p$ вірне, якщо біноміально розподілена з параметрами $(n,p)$ випадкова величина має математичне сподівання $12$ та дисперсію $4$?",
+          "question": "$Х= \\{1,2,3\\}, p=\\{(1,1), (1,2), (2,1)\\}$ відношення $р$ буде",
           "index": 19,
           "answers": [
             {
               "index": 1,
-              "title": "$n=18, p=2/3$"
+              "title": "симетричним"
             },
             {
               "index": 2,
-              "title": "$n=60, p=1/5$"
+              "title": "транзитивним"
             },
             {
               "index": 3,
-              "title": "$n=36, p=1/3$"
+              "title": "функціональним"
             },
             {
               "index": 4,
-              "title": "$n=30, p=2/5$"
+              "title": "рефлексивним"
             }
           ],
           "checked": true
         },
         {
-          "question": "Яке з наведених нижче тверджень вірне, якщо випадкова величина \\xi приймає значення $x_1,x_2,\\dots,х_n,\\dots$ із ймовірностями $p_1,p_2,\\dots,p_n,\\dots$",
+          "question": "$Х= \\{1,2,3\\}, p=\\{(1,2), (3,2), (2,2)\\}$ відношення $р$ буде",
           "index": 20,
           "answers": [
             {
               "index": 1,
-              "title": "$\\sum_{i=0}^{\\infin} (p_i)=1$"
+              "title": "функціональним"
             },
             {
               "index": 2,
-              "title": "$\\sum_{i=0}^{\\infin} (p_i)>1$"
+              "title": "симетричним"
             },
             {
               "index": 3,
-              "title": "$\\sum_{i=0}^{\\infin} (p_i)<1$"
+              "title": "рефлексивним"
             },
             {
               "index": 4,
-              "title": "$\\sum_{i=0}^{\\infin} (p_i)=0$"
+              "title": "антирефлексивним"
             }
           ],
           "checked": true
         },
         {
-          "question": "Закон розподілу випадкової величини $\\xi$ має вигляд: $\\begin{array}{cc} 0 & 1 & 2 & 3 & 4 \\\\ 0.2 & 0.1 & 0.1 & 0.5 & 0.1 \\end{array}$ Яке з наведених нижче тверджень не вірне?",
+          "question": "$Х= \\{1,2,3\\}, p=\\{(3,1), (1,2), (1,3)\\}$ відношення р буде",
           "index": 21,
           "answers": [
             {
               "index": 1,
-              "title": "$P\\{\\xi\\ge 2\\}=0.8$"
+              "title": "антирефлексивним"
             },
             {
               "index": 2,
-              "title": "$P\\{\\xi\\le 2\\}=0.4$"
+              "title": "функціональним"
             },
             {
               "index": 3,
-              "title": "$P\\{\\xi\\ge 2\\}=0.7$"
+              "title": "симетричним"
             },
             {
               "index": 4,
-              "title": "$P\\{\\xi>2\\}=0.6$"
+              "title": "транзитивним"
             }
           ],
           "checked": true
         },
         {
-          "question": "Нехай $\\xi$  число влучень у ціль при чотирьох пострілах з імовірністю влучення $1/2$ в кожному. Який з наведених нижче законів розподілів має $\\xi$?",
+          "question": "$Х= \\{1,2,3\\}, p=\\{(1,1), (1,2), (2,2)\\}, \\sigma=\\{(2,2), (2,3)\\}$ яка з вказаних пар не входить до $р\\cdot\\sigma$",
           "index": 22,
           "answers": [
             {
               "index": 1,
-              "title": "$\\begin{array}{cc} 0 & 1 & 2 & 3 & 4 \\\\  (1/2)^4 & (1/2)^2 & (1/2)^3 & (1/2) ^2 & (1/2)^4\\end{array}$"
+              "title": "$(1,1)$"
             },
             {
               "index": 2,
-              "title": "$\\begin{array}{cc} 0 & 1 & 2 & 3 & 4 \\\\ (1/2)^2 & (1/2)^4 & (1/2)^3 & (1/2) ^4 & (1/2)^2 \\end{array}$"
+              "title": "$(2,3)$"
             },
             {
               "index": 3,
-              "title": "$\\begin{array}{cc} 0 & 1 & 2 & 3 & 4 \\\\ (1/2)^3 & (1/2)^2 & (1/2)^2 & (1/2)^2 & (1/2)^3 \\end{array}$"
+              "title": "$(2,2)$"
             },
             {
               "index": 4,
-              "title": "$\\begin{array}{cc} 0 & 1 & 2 & 3 & 4 \\\\ (1/2)^3 & (1/2)^3 & (1/2)^3 & (1/2) ^3 & (1/2)^3 \\end{array}$"
+              "title": "$(1,2)$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Яке з наведених нижче тверджень вірне, якщо закон розподілу випадкової величини $\\xi$ має вигляд $\\begin{array}{cc} -1 & 0 & 1  \\\\ 0.2 &0.3&0.5 \\end{array}$ ?",
+          "question": "$Х= \\{1,2,3\\}, p=\\{(1,1), (1,2), (2,2)\\}, \\sigma=\\{(2,2), (2,3)\\}$ яка з вказаних пар входить до $р\\cdot\\sigma$",
           "index": 23,
           "answers": [
             {
               "index": 1,
-              "title": "$P\\{\\xi\\le0\\} = P\\{\\xi>0\\}$"
+              "title": "$(2,2)$"
             },
             {
               "index": 2,
-              "title": "$P\\{\\xi\\le0\\} > P\\{\\xi>0\\}$"
+              "title": "$(2,1)$"
             },
             {
               "index": 3,
-              "title": "$P\\{\\xi\\le0\\} < P\\{\\xi>0\\}$"
+              "title": "$(1,1)$"
             },
             {
               "index": 4,
-              "title": "$P\\{\\xi\\lt0\\} = P\\{\\xi\\ge0\\}$"
+              "title": "$(3,1)$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Яке з наведених нижче тверджень не може бути вірним, якщо $F(x)$ - функція розподілу випадкової величини $\\xi$?",
+          "question": "$Х= \\{1,2,3\\}$,яке з відношень є еквівалентністю на $Х$?",
           "index": 24,
           "answers": [
             {
               "index": 1,
-              "title": "$F(x)>1$, для деякого $x$"
+              "title": "$p=\\{(1,1), (2,2), (3,3)\\}$"
             },
             {
               "index": 2,
-              "title": "$F(x)\\ge1$, для всіх $x$"
+              "title": "$p=\\{(1,1), (2,3), (3,2)\\}$"
             },
             {
               "index": 3,
-              "title": "$F(x)=0$, для деякого $x$"
+              "title": "$p=\\{(1,1), (1,2), (2,2), (3,3)\\}$"
             },
             {
               "index": 4,
-              "title": "$F(x)\\le 1$, для всіх $x$"
+              "title": "$p=\\{(1,1), (1,2), (1,3), (2,2), (2,3), (3,2),(3,3)\\}$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Якщо $F(х)$ - функція розподілу невідьємної випадкової величини, то для відємних значень аргументу...",
+          "question": "$Х= {1,2,3}$,яке з відношень є порядком на $Х$?",
           "index": 25,
           "answers": [
             {
               "index": 1,
-              "title": "$F(х)=0$"
+              "title": "$p=\\{(1,1), (1,2), (2,2), (3,3)\\}$"
             },
             {
               "index": 2,
-              "title": "$F(х)<0$"
+              "title": "$p=\\{(1,1), (2,3), (3,2)\\}$"
             },
             {
               "index": 3,
-              "title": "$F(х)>0$"
+              "title": "$p=\\{(1,1), (1,2), (1,3), (2,2), (2,3), (3,2), (3,3)\\}$"
             },
             {
               "index": 4,
-              "title": "$F(х)$ - невизначена"
+              "title": "$p=\\{(1,1), (2,2), (3,3), (3,1), (1,3)\\}$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Яке з наведених нижче тверджень вірне для будь-якої випадкової величини $\\xi$?",
+          "question": "$Х= \\{1,2,3\\}$,яке з відношень є строгим порядком на $Х$?",
           "index": 26,
           "answers": [
             {
               "index": 1,
-              "title": "$P\\{\\xi\\ge x_1\\}\\ge P\\{\\xi\\ge x_2\\}$, для будь-яких $x_1<x_2$"
+              "title": "$p=\\{(1,2), (2,3), (1,3)\\}$"
             },
             {
               "index": 2,
-              "title": "$P\\{\\xi\\ge x_1\\}<P\\{\\xi\\ge x_2\\}$, для будь-яких $x_1<x_2$"
+              "title": "$p=\\{(1,1), (2,3), (3,2)\\}$"
             },
             {
               "index": 3,
-              "title": "$P\\{\\xi\\ge x_1\\}\\le P\\{\\xi\\ge x_2\\}$, для будь-яких $x_1<x_2$"
+              "title": "$p=\\{(1,1), (1,2), (2,2), (3,3)\\}$"
             },
             {
               "index": 4,
-              "title": "$P\\{\\xi\\ge x_1\\}>P\\{\\xi\\ge x_2\\}$, для будь-яких $x_1<x_2$"
+              "title": "$p=\\{(1,1), (1,2), (1,3), (2,2), (2,3), (3,2), (3,3)\\}$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Функція розподілу рівномірної на $[0;2]$ випадкові величини при всіх $x\\ge 2$ дорівнює",
+          "question": "Нехай $р, \\sigma$ є симетричні на $Х$ і $р \\not =g$, яке з відношень не буде симетричним на $Х$?",
           "index": 27,
           "answers": [
             {
               "index": 1,
-              "title": "$1$"
+              "title": "кожен з вказаних відношень буде симетричним на $Х$"
             },
             {
               "index": 2,
-              "title": "$0.25$"
+              "title": "$р \\cup g$"
             },
             {
               "index": 3,
-              "title": "$0.5$"
+              "title": "$р/g$"
             },
             {
               "index": 4,
-              "title": "$0.75$"
+              "title": "$р \\cap g$"
             }
           ],
           "checked": true
         },
         {
-          "question": "$f(x)$ - щільність розподілу деякої випадкової величини. Яка з наведених рівностей не може мати місця?",
+          "question": "Нехай $р, \\sigma$ є рефлексивні на $Х$, яке з відношень не буде рефлексивним на $Х$",
           "index": 28,
           "answers": [
             {
               "index": 1,
-              "title": "$\\int_{-\\infin}^{\\infin}f(x)dx=\\frac{1}{2}$"
+              "title": "$р/\\sigma$"
             },
             {
               "index": 2,
-              "title": "$\\int_{-\\infin}^{0}f(x)dx=\\frac{1}{2}$"
+              "title": "$р \\cap \\sigma$"
             },
             {
               "index": 3,
-              "title": "$\\int_{0}^{\\infin}f(x)dx=\\frac{1}{2}$"
+              "title": "$р \\cup \\sigma$"
             },
             {
               "index": 4,
-              "title": "$\\int_{0}^{\\infin}f(x)dx=0$"
+              "title": "кожне з вказаних відношень буде рефлексивним на $Х$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Яке з наведених нижче функцій є щільністю розподілу деякої випадкової величини?",
+          "question": "Нехай $р, \\sigma$ є функціональні на $Х$, яке з відношень може не бути функціональним на $Х$",
           "index": 29,
           "answers": [
             {
               "index": 1,
-              "title": "$f(x)=\\begin{cases} 2x, & 0 \\le x\\lt 1 \\\\  0, &x\\lt 0, x\\ge 1 \\end{cases}$"
+              "title": "$р \\cup \\sigma$"
             },
             {
               "index": 2,
-              "title": "$f(x)=\\begin{cases} x-1, & 0 \\le x\\lt 1 \\\\ 0, &x\\lt 0, x\\ge 1 \\end{cases}$"
+              "title": "$р \\cap \\sigma$"
             },
             {
               "index": 3,
-              "title": "$f(x)=\\begin{cases} x^2, & 0 \\le x\\lt 1 \\\\ 0, &x\\lt 0, x\\ge 1 \\end{cases}$"
+              "title": "$р/\\sigma$"
             },
             {
               "index": 4,
-              "title": "$f(x)=\\begin{cases}  x+1, & 0 \\le x\\lt 1 \\\\ 0, &x\\lt 0, x\\ge 1 \\end{cases}$"
+              "title": "кожне з вказаних відношень буде функціональним на $Х$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Яке з наведених нижче тверджень вірне, якщо функція розподілу випадкової величини $\\xi$ неперервна?",
+          "question": "Нехай $р, \\sigma$ є антирефлексивні на $Х$, яке з відношень не буде антирефлексивним на $Х$?",
           "index": 30,
           "answers": [
             {
               "index": 1,
-              "title": "$P\\{\\xi=a\\}=P\\{\\xi=b\\}$для будь-яких $a<b$"
+              "title": "кожне з вказаних відношень буде антирефлексивним на $Х$"
             },
             {
               "index": 2,
-              "title": "$P\\{\\xi=a\\}<P\\{\\xi=b\\}$для будь-яких $a<b$"
+              "title": "$р \\cup \\sigma$"
             },
             {
               "index": 3,
-              "title": "$P\\{\\xi=a\\}>P\\{\\xi=b\\}$ для будь-яких $a<b$"
+              "title": "$р \\cap \\sigma$"
             },
             {
               "index": 4,
-              "title": "$P\\{\\xi=a\\}\\ne P\\{\\xi=b\\}$ для деяких $a<b$"
+              "title": "$р/\\sigma$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Яке з наведених нижче тверджень вірне, якщо $f(x)$ - щільність розподілу випадкової величини $\\xi$ ?",
+          "question": "$Х= \\{1,2,3\\}, р=\\{(1,1), (1,2), (2,1), (2,2), (3,3)\\}$ скільки буде різних класів еквівалентності",
           "index": 31,
           "answers": [
             {
               "index": 1,
-              "title": "$P\\{a<\\xi\\le b\\}=\\int_{a}^{b}f(x)$ для будь-яких $a\\le b$"
+              "title": "$2$"
             },
             {
               "index": 2,
-              "title": "$P\\{a<\\xi\\le b\\}<\\int_{a}^{b}f(x)$ для будь-яких $a\\le b$"
+              "title": "$3$"
             },
             {
               "index": 3,
-              "title": "$P\\{a<\\xi\\le b\\}>\\int_{a}^{b}f(x)$ для будь-яких $a<b$"
+              "title": "$0$"
             },
             {
               "index": 4,
-              "title": "$P\\{a<\\xi\\le b\\}\\ne \\int_{a}^{b}f(x)$ для деяких $a\\le b$"
+              "title": "$1$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Bкажить невірне твердження відносно двомірної функції розподілу $F(x,y)$",
+          "question": "Яке з вказаних відношень на $R$ не буде антирефлексивним?",
           "index": 32,
           "answers": [
             {
               "index": 1,
-              "title": "$\\lim\\limits_{x\\to+\\infin, y\\to-\\infin} \\ne 0$"
+              "title": "$=$"
             },
             {
               "index": 2,
-              "title": "$\\lim\\limits_{x\\to+\\infin, y\\to+\\infin} = 1$"
+              "title": "$>$"
             },
             {
               "index": 3,
-              "title": "$\\lim\\limits_{x\\to-\\infin, y\\to+\\infin} = 0$"
+              "title": "$<$"
             },
             {
               "index": 4,
-              "title": "$\\lim\\limits_{x\\to-\\infin, y\\to-\\infin} = 0$"
+              "title": "$\\not  =$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Bкажіть вірне твердження відносно двомірної функції розподілу $F(x,y)$ випадкового вектора $(\\xi, \\eta)$",
+          "question": "Яке з вказаних відношень на $R$ не буде антисеметричним",
           "index": 33,
           "answers": [
             {
               "index": 1,
-              "title": "$\\lim\\limits_{x\\to+\\infin} F(x,y)=P\\{\\xi\\ge х\\}$"
+              "title": "$\\not =$"
             },
             {
               "index": 2,
-              "title": "$\\lim\\limits_{x\\to+\\infin} F(x,y)=P\\{\\xi<х\\}$"
+              "title": "$=$"
             },
             {
               "index": 3,
-              "title": "$\\lim\\limits_{x\\to+\\infin} F(x,y)=P\\{\\eta\\le х\\}$"
+              "title": "$\\sube$"
             },
             {
               "index": 4,
-              "title": "$\\lim\\limits_{x\\to+\\infin} F(x,y)=P\\{\\eta>х\\}$"
+              "title": "$\\ge$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Яка з рівностей не має місця для довільних випадкових величин $\\xi$ та $\\eta$?",
+          "question": "На вершину гори ведуть $5$ доріг. Скількома способами турист може піднятися в гору і спуститися з гори, якщо підйом і спуск обовязково повинен проходити по різних дорогах?",
           "index": 34,
           "answers": [
             {
               "index": 1,
-              "title": "$M\\xi(\\eta-1)=M\\xi\\cdot M\\eta-M\\xi$"
+              "title": "$20$"
             },
             {
               "index": 2,
-              "title": "$M(\\xi-\\eta)=M\\xi-M\\eta$"
+              "title": "$25$"
             },
             {
               "index": 3,
-              "title": "$ M\\xi(\\eta-1)=M\\xi\\cdot\\eta-M\\xi$"
+              "title": "$9$"
             },
             {
               "index": 4,
-              "title": "$M(a*\\xi-b)=aM\\xi-b$"
+              "title": "$24$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Нехай $\\xi$ та $\\eta$ незалежні випадкові величини. Bкажіть вірне твердження.",
+          "question": "Скількома способами можно розкласти $12$ різних подарунків по $4$ різним пакетам?",
           "index": 35,
           "answers": [
             {
               "index": 1,
-              "title": "$M(\\xi-M\\xi)(\\eta-M\\eta)=0$"
+              "title": "$4^{12}$"
             },
             {
               "index": 2,
-              "title": "$M\\xi\\cdot\\eta=0$"
+              "title": "$A_{12}^4$"
             },
             {
               "index": 3,
-              "title": "$M(\\xi-\\eta)(\\xi+\\eta)=(M\\xi)^2-(M\\eta)^2$"
+              "title": "$C_{12}^4$"
             },
             {
               "index": 4,
-              "title": "$M\\xi(\\xi-\\eta)=M\\xi(M\\xi-M\\eta)$"
+              "title": "$48$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Нехай $\\xi$ та $\\eta$ незалежні випадкові величини. Bкажіть вірне твердження.",
+          "question": "З карток із числами $1, 2, 3 ...10$ вибирають пять без повторення, скількома способами це можно зробити",
           "index": 36,
           "answers": [
             {
               "index": 1,
-              "title": "$D(\\xi-\\eta)=D\\xi+D\\eta$"
+              "title": "$C_{10}^5$"
             },
             {
               "index": 2,
-              "title": "$D\\xi\\cdot\\eta=D\\xi\\cdot D\\eta$"
+              "title": "$10^5$"
             },
             {
               "index": 3,
-              "title": "$D(\\xi-\\eta)=D\\xi-D\\eta$"
+              "title": "$A_{10}^5$"
             },
             {
               "index": 4,
-              "title": "$D(2\\xi+\\eta)=2D\\xi+D\\eta$"
+              "title": "$5!$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Нехай $\\xi$ деяка випадкова величина. Bкажіть вірне твердження.",
+          "question": "З карток із числами $1, 2, 3 ...10$ вибирають пять без повторення, скількома способами це можно зробити так, щоб серед обраних була картка з числом $1$?",
           "index": 37,
           "answers": [
             {
               "index": 1,
-              "title": "$D(\\xi-1)=D\\xi$"
+              "title": "$C_9^4$"
             },
             {
               "index": 2,
-              "title": "$D(-\\xi)=-D\\xi$"
+              "title": "$10^5$"
             },
             {
               "index": 3,
-              "title": "$D(\\xi+1)=D\\xi+1$"
+              "title": "$5^10$"
             },
             {
               "index": 4,
-              "title": "$D(\\xi-1)=D\\xi+1$"
+              "title": "$A_{10}^5$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Нехай випадкова подія $A$ та $B$ такі, що $P(A)\\gt 0, P(B)\\gt 0$ та $P(A/B)=0$. Bкажіть не вірне твердження.",
+          "question": "З карток із числами $1, 2, 3...10$ вибирають пять без повторення, скількома способами це можно зробити так, щоб серед обраних була картка з числами $1$ і $6$",
           "index": 38,
           "answers": [
             {
               "index": 1,
-              "title": "$A$ та $B$ незалежні"
+              "title": "$C_8^3$"
             },
             {
               "index": 2,
-              "title": "$P(B\\cup A)=P(A)+P(B)$"
+              "title": "$5^10$"
             },
             {
               "index": 3,
-              "title": "$P(B/A)=0$"
+              "title": "$A_{10}^5$"
             },
             {
               "index": 4,
-              "title": "$A$ та $B$ несумісні"
+              "title": "$5!$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Які з наведених даних дозволяють обчислити $P(A)$ та $P(B)$?",
+          "question": "Скільки тризначних чисел можна скласти з цифр $1, 2, 3, 4, 5$",
           "index": 39,
           "answers": [
             {
               "index": 1,
-              "title": "$P(B\\cap A)=1/6, P(A\\cup B)=5/6,  P(B\\setminus A)=1/3$"
+              "title": "$5^3$"
             },
             {
               "index": 2,
-              "title": "$P(B\\cap A)=1/6, P(A\\cup B)=5/6$"
+              "title": "$A_5^3$"
             },
             {
               "index": 3,
-              "title": "$P(A\\cup B)=5/6, P(A)=1/2$"
+              "title": "$3^5$"
             },
             {
               "index": 4,
-              "title": "$P(B\\cap A)=1/6, P(A)=1/3$"
+              "title": "$C_5^3$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Значення яких з наведених нижче величин дозволяють обчислити $P(B \\cap A)$ для довільних подій $A$ і $B $ $(P(A)\\cdot P(B)\\ne 0)$",
+          "question": "Скільки тризначних чисел можна скласти з цифр $1, 2, 3, 4, 5,$ якщо кожну з цих цифр можна використовувати не більше одного разу?",
           "index": 40,
           "answers": [
             {
               "index": 1,
-              "title": "$P(B)$ та $P(A/B)$"
+              "title": "$A_5^3$"
             },
             {
               "index": 2,
-              "title": "$P(A)$ та $P(B \\cup A)$"
+              "title": "$5^3$"
             },
             {
               "index": 3,
-              "title": "$P(A)$ та $P(B)$"
+              "title": "$C_5^3$"
             },
             {
               "index": 4,
-              "title": "$P(A)$ та $P(A/B)$"
+              "title": "$5!$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Яка з наведених подій не співпадає з $A$?",
+          "question": "Скількома способами можна розсадити $9$ чоловік  трьох вагонах метро",
           "index": 41,
           "answers": [
             {
               "index": 1,
-              "title": "$A \\cup \\overline A \\cap \\overline A$"
+              "title": "$3^9$"
             },
             {
               "index": 2,
-              "title": "$A \\cap A$"
+              "title": "$9!$"
             },
             {
               "index": 3,
-              "title": "$A \\cap \\overline A\\cup A$"
+              "title": "$C_9^3\\cdot C_6^3$"
             },
             {
               "index": 4,
-              "title": "$A \\cup A$"
+              "title": "$A_9^3$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Яка з наведених подій відбувається завжди ($A$ і $B$ довільні події)",
+          "question": "Скількома способами можна розсадити $9$ чоловік  трьох вагонах метро, так щоб у кожному вагоні було по $3$ чоловіки?",
           "index": 42,
           "answers": [
             {
               "index": 1,
-              "title": "$(A \\cup B) \\cup (\\overline A \\cap \\overline B)$"
+              "title": "$C_9^3\\cdot C_6^3$"
             },
             {
               "index": 2,
-              "title": "$(A \\cup \\overline B) \\cap (A \\cup B)$"
+              "title": "$9!$"
             },
             {
               "index": 3,
-              "title": "$(A \\cap B) \\cap (\\overline A \\cup \\overline B)$"
+              "title": "$9^3$"
             },
             {
               "index": 4,
-              "title": "$(A \\cup \\overline B) \\cap (\\overline A \\cap \\overline B)$"
+              "title": "$A_9^3$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Яка з наведених подій є протилежною до події $A \\cap \\overline B$ ($A$ і $B$ довільні події)?",
+          "question": "Скількома способами можна розділити на дві рівні частини колоду з $52$ карт?",
           "index": 43,
           "answers": [
             {
               "index": 1,
-              "title": "$\\overline A \\cup B$"
+              "title": "$C_{52}^{26}$"
             },
             {
               "index": 2,
-              "title": "$\\overline A \\cap B$"
+              "title": "$52^{26}$"
             },
             {
               "index": 3,
-              "title": "$\\overline A \\cap \\overline B$"
+              "title": "$104$"
             },
             {
               "index": 4,
-              "title": "$\\overline A \\cup \\overline B$"
+              "title": "$26!$"
             }
           ],
           "checked": true
         },
         {
-          "question": "На відрізку довжиною $l$ навмання вибирають точку. Яке з наведених співвідношень має місця, якщо $A = \\{ \\text{точка потрапить лівіше середини відрізка}\\}$, $B = \\{\\text{точка потрапить правіше середини відрізка}\\}$ і $C = \\{\\text{точка потрапить ближче до середини відрізка, ніж до його кінців}\\}$?",
+          "question": "Група з $6$ хлопчиків і $6$ дівчинок діляться на дві рівні частини. Скільки існує способів поділу?",
           "index": 44,
           "answers": [
             {
               "index": 1,
-              "title": "$P(A)=P(B)=P(C)$"
+              "title": "$C_12^6$"
             },
             {
               "index": 2,
-              "title": "$P(A)<P(B)<P(C)$"
+              "title": "$6^2$"
             },
             {
               "index": 3,
-              "title": "$P(A)=P(B)>P(C)$"
+              "title": "$6!$"
             },
             {
               "index": 4,
-              "title": "$P(A)=P(B)<P(C)$"
+              "title": "$2^6$"
             }
           ],
           "checked": true
         },
         {
-          "question": "З карток з номерами $1,2,3$ навмання по черзі беруть дві і складають двозначне число. Ймовірність того, що отримане число буде парним, дорівнює",
+          "question": "Група з $6$ хлопчиків і $6$ дівчинок діляться на дві рівні частини. Скільки існує способів поділу, якщо в кожній підгрупі буде порівно хлопчиків і дівчинок?",
           "index": 45,
           "answers": [
             {
               "index": 1,
-              "title": "$1/3$"
+              "title": "$(C_6^3)^2$"
             },
             {
               "index": 2,
-              "title": "$1/6$"
+              "title": "$12!$"
             },
             {
               "index": 3,
-              "title": "$2/9$"
+              "title": "$C_{12}^6$"
             },
             {
               "index": 4,
-              "title": "$1/2$"
+              "title": "$A_{12}^6$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Випадкова величини $\\xi$ має біноміальний розподіл з параметрами $(10; 0.8)$. Яке з наведених тверджень є невірним?",
+          "question": "Скількома способами з повної колоди карт ($52$ карти) можна витягти чотири карти так, щоб усі вони були картинками, тобто валет, дама, король і туз?",
           "index": 46,
           "answers": [
             {
               "index": 1,
-              "title": "$P(\\xi=2)=P(\\xi=8)$"
+              "title": "$C_{16}^4$"
             },
             {
               "index": 2,
-              "title": "$P(\\xi=2)=45\\cdot0.8^20.2^8$"
+              "title": "$A_{16}^4$"
             },
             {
               "index": 3,
-              "title": "$P(\\xi=k)=C_{10}^{k}0.8^k0.2^{10-k}, k=\\overline{0,10}$"
+              "title": "$52^4$"
             },
             {
               "index": 4,
-              "title": "$P(\\xi>0)=\\frac{10^{10}-2^{10}}{10^{10}}$"
+              "title": "$4^4$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Закон розподілу випадкової величини $\\xi$ має вигляд $\\begin{array}{cc} -1 & 0 & 1 \\\\ 1/4 & 1/3 & p \\end{array}$ Bкажіть вірне твердження",
+          "question": "Скільки існує шестицифрових телефонних номерів, у яких усі цифри різні (можливі номери, що починаються з $0$)",
           "index": 47,
           "answers": [
             {
               "index": 1,
-              "title": "$P(\\xi<0)<P(\\xi>0)$"
+              "title": "$A_{10}^6$"
             },
             {
               "index": 2,
-              "title": "$p=1/5$"
+              "title": "$6!$"
             },
             {
               "index": 3,
-              "title": "$P(\\xi=-1)=P(\\xi=1)$"
+              "title": "$C_{10}^6$"
             },
             {
               "index": 4,
-              "title": "$P(|\\xi|=1)=1$"
+              "title": "$10^6$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Гральний кубик підкидають до першої появи шістки. Який розподіл має випадкова величини $\\xi$ - загальна кількість підкидань?",
+          "question": "Скільки існує шестицифрових телефонних номерів, у яких усі цифри однакові",
           "index": 48,
           "answers": [
             {
               "index": 1,
-              "title": "$P(\\xi=k)=1/6\\cdot(5/6)^k, k=1,2,\\dots$"
+              "title": "$10$"
             },
             {
               "index": 2,
-              "title": "$P(\\xi=k)=1/6\\cdot(5/6)^{k-1}, k=1,2,\\dots$"
+              "title": "$C_{10}^6$"
             },
             {
               "index": 3,
-              "title": "$P(\\xi=k)=5/6\\cdot(5/6)^{k-1}, k=1,2,\\dots$"
+              "title": "$6!$"
             },
             {
               "index": 4,
-              "title": "$P(\\xi=k)=1/6\\cdot(1/6)^{k-1}, k=0,1,\\dots$"
+              "title": "$A_{10}^6$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Bкажіть вірне серед наведених нижче тверджень відносно функції розподілу $F(x)$",
+          "question": "Скількома способами можна розсадити за круглим столом $5$ чоловіків і $5$ жінок так, щоб особи однієї статі на сиділи поруч?",
           "index": 49,
           "answers": [
             {
               "index": 1,
-              "title": "$\\lim\\limits_{x\\to-\\infin} F(x)<\\lim\\limits_{x\\to+\\infin} F(x)$"
+              "title": "$2(5!5!)$"
             },
             {
               "index": 2,
-              "title": "$\\lim\\limits_{x\\to+\\infin} F(x)>0$"
+              "title": "$10!$"
             },
             {
               "index": 3,
-              "title": "$\\lim\\limits_{x\\to+\\infin} F(x)<0$"
+              "title": "$5!5!$"
             },
             {
               "index": 4,
-              "title": "$\\lim\\limits_{x\\to+\\infin} F(x)>1$"
+              "title": "$5^5$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Яка з рівностей не вірна, якщо $F(x)$ - функція розподілу довільної випадкової величини $\\xi$?",
+          "question": "Скількома способами з групи в $25$ чоловік можна вибрати трьох для участі у зборах",
           "index": 50,
           "answers": [
             {
               "index": 1,
-              "title": "$P(a<\\xi<b)=F(b)-F(a), a<b$"
+              "title": "$C_{25}^3$"
             },
             {
               "index": 2,
-              "title": "$P(a\\le \\xi\\le b)=F(b+0)-F(a), a<b$"
+              "title": "$43^{25}$"
             },
             {
               "index": 3,
-              "title": "$P(a<\\xi\\le b)=F(b+0)-F(a+0), a<b$"
+              "title": "$25^3$"
             },
             {
               "index": 4,
-              "title": "$P(a\\le \\xi<b)=F(b)-F(a), a<b$"
+              "title": "$A_{25}^3$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Серед наведених нижче тверджень відносно функції розподілу $F(x)$ довільної випадкової величини вкажіть невірне",
+          "question": "Скількома способами з групи в $25$ чоловік можна вибрати старосту, профорга, і спортивного організатора (суміщення різних доручень не допускається)",
           "index": 51,
           "answers": [
             {
               "index": 1,
-              "title": "$F(x)$ - неперервна функція на $(-\\infin, +\\infin)$"
+              "title": "$A_{25}^3$"
             },
             {
               "index": 2,
-              "title": "$F(x)$ - неспадна функція   на $(-\\infin, +\\infin)$"
+              "title": "$3!$"
             },
             {
               "index": 3,
-              "title": "$F(x)$ - може дорівнювати одиниці для всіх  $x\\in[0, +\\infin)$"
+              "title": "$C_{25}^3$"
             },
             {
               "index": 4,
-              "title": "$F(x)$ - визначена на $(-\\infin, +\\infin)$"
+              "title": "$25^3$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Яка з рівностей вірна, якщо $F(x)$ - функція розподілу довільної випадкової величини $\\xi$?",
+          "question": "Скільки можна скласти різних чотирицифрових шифрів для банківського сейфа (можливий шифр $0000$)",
           "index": 52,
           "answers": [
             {
               "index": 1,
-              "title": "$P(\\xi\\le a)=F(a+0)$"
+              "title": "$10^4$"
             },
             {
               "index": 2,
-              "title": "$P(\\xi=a)=F(a-0)-F(a+0)$"
+              "title": "$C_{10}^4$"
             },
             {
               "index": 3,
-              "title": "$P(\\xi>a)=1-F(a)$"
+              "title": "$4^10$"
             },
             {
               "index": 4,
-              "title": "$P(\\xi\\ge a)=1-F(a+0)$"
+              "title": "$A_{10}^4$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Серед наведених функцій вкажіть ту, яка може бути функцією розподілу деякої випадкової величини",
+          "question": "Скільки можна скласти різних чотирицифрових шифрів для банківського сейфа, якщо всі цифри шифру різні?",
           "index": 53,
           "answers": [
             {
               "index": 1,
-              "title": "$F(x)=1-e^{-3x}, x\\ge 0$"
+              "title": "$A_{10}^4$"
             },
             {
               "index": 2,
-              "title": "$F(x)=1/2+e^{-3x}, x\\ge 0$"
+              "title": "$10^4$"
             },
             {
               "index": 3,
-              "title": "$F(x)=1+e^{-3x}, x\\ge 0$"
+              "title": "$4^10$"
             },
             {
               "index": 4,
-              "title": "$F(x)=1/2-e^{-3x}, x\\ge 0$"
+              "title": "$C_{10}^4$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Bкажіть вірне серед наведених тверджень відносно розподілу $F(x)$ випадкової величини $\\xi$.",
+          "question": "Скільки можна скласти різних чотирицифрових шифрів для банківського сейфа, якщо всі цифри шифру однакові?",
           "index": 54,
           "answers": [
             {
               "index": 1,
-              "title": "$P\\{a\\le \\xi\\le c\\}\\le \\int\\limits_{a}^{b}f(x), a<c<b$"
+              "title": "$10$"
             },
             {
               "index": 2,
-              "title": "$P\\{a\\le \\xi\\le c\\}\\le \\int\\limits_{a}^{b}f(x), a<c<b$"
+              "title": "$A_{10}^4$"
             },
             {
               "index": 3,
-              "title": "$P\\{a\\le \\xi\\le c\\}> \\int\\limits_{a}^{b}f(x), a<c<b$"
+              "title": "$4!$"
             },
             {
               "index": 4,
-              "title": "$P\\{a\\le \\xi\\le c\\}\\ge \\int\\limits_{a}^{b}f(x), a<c<b$"
+              "title": "$C_{10}^4$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Bипадкові величини $\\xi$, $\\eta$ та $\\varsigma$ мають рівномірний розподіл  відповідно на інтервалах $[0,1][1,2][2,3]$. Яке з наведених тверджень вірне:",
+          "question": "На залізничній станції є $9$ світлофорів. Скільки може бути подано різних сигналів, якщо кожний світофор має три стани: червоний, жовний, зелений",
           "index": 55,
           "answers": [
             {
               "index": 1,
-              "title": "$M\\xi < M\\eta < M\\varsigma$"
+              "title": "$3^9$"
             },
             {
               "index": 2,
-              "title": "$M\\xi > M\\eta > M\\varsigma$"
+              "title": "$9^3$"
             },
             {
               "index": 3,
-              "title": "$M\\xi = M\\eta = M\\varsigma$"
+              "title": "$A_9^3$"
             },
             {
               "index": 4,
-              "title": "Неможливо порівняти $M\\xi, M\\eta, M\\varsigma$."
+              "title": "$27$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Bипадкові величини $\\xi, \\eta$ та $\\varsigma$ мають пуасонівський розподіл з парметрами $1,2,3$ відповідно . Яке з наведених тверджень вірне:",
+          "question": "Скільки різних парних тризначних чисел можна утворити із цифр $1, 2, 3, 4, 5, 6,$",
           "index": 56,
           "answers": [
             {
               "index": 1,
-              "title": "$M\\xi < M\\eta < M\\varsigma$"
+              "title": "$108$"
             },
             {
               "index": 2,
-              "title": "$M\\xi = M\\eta = M\\varsigma$"
+              "title": "$6!$"
             },
             {
               "index": 3,
-              "title": "Неможливо порівняти $M\\xi, M\\eta, M\\varsigma$"
+              "title": "$5!$"
             },
             {
               "index": 4,
-              "title": "$M\\xi > M\\eta > M\\varsigma$"
+              "title": "$40$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Ймовірність того, що подія $A_і$ відбудеться у випадковому експерименті, дорівнює $p_i, i=1,2,3$, $p_1=p_2>p_3$.Проводиться $N$ таких незалежних експериментів. Випадкові величини $\\xi_і$ - кількості експериментів, в яких спостерігається подія $A_і$. Яке з наведених тверджень вірне?",
+          "question": "Скільки різних парних тризначних чисел, що закінчуються на $3$, можна утворити із цифр $1, 2, 3, 4, 5, 6$",
           "index": 57,
           "answers": [
             {
               "index": 1,
-              "title": "$M\\xi_1 = M\\xi_2 > M\\xi_3$"
+              "title": "$36$"
             },
             {
               "index": 2,
-              "title": "$M\\xi_1 < M\\xi_2 < M\\xi_3$"
+              "title": "$10$"
             },
             {
               "index": 3,
-              "title": "$M\\xi_1 = M\\xi_2 < M\\xi_3$"
+              "title": "$5!$"
             },
             {
               "index": 4,
-              "title": "$M\\xi_1 = M\\xi_2 = M\\xi_3$"
+              "title": "$5^3$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Випадкові величини $\\xi$, $\\eta$ та $\\varsigma$ мають нормальний розподіл  з параметрами $(0,1)(0,2)(0,3)$. Яке з наведених тверджень вірне:",
+          "question": "Дано $n$ точок, жодноі $3$ із яких не лежать на одній прямій. Скільки прямих можна провести, використовуючи всі пари точок?",
           "index": 58,
           "answers": [
             {
               "index": 1,
-              "title": "$M\\xi = M\\eta = M\\varsigma$"
+              "title": "$C_n^2$"
             },
             {
               "index": 2,
-              "title": "$M\\xi > M\\eta > M\\varsigma$"
+              "title": "$2^n$"
             },
             {
               "index": 3,
-              "title": "$M\\xi < M\\eta < M\\varsigma$"
+              "title": "$n^2$"
             },
             {
               "index": 4,
-              "title": "Неможливо порівняти $M\\xi, M\\eta, M\\varsigma$"
+              "title": "$n$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Випадкові величини $\\xi$, $\\eta$  мають експоненціальний розподіл з параметрами $\\lambda$ і $\\mu (\\lambda < \\mu)$. Яке з наведених тверджень вірне:",
+          "question": "Скількома способами із повної колоди карт ($4\\cdot 13$ карти) можна витягнути $8$ карт так, щоб серед них було чотири дами?",
           "index": 59,
           "answers": [
             {
               "index": 1,
-              "title": "$M\\xi > M\\eta$"
+              "title": "$C_{48}^4$"
             },
             {
               "index": 2,
-              "title": "$M\\xi < M\\eta$"
+              "title": "$C_{52}^8$"
             },
             {
               "index": 3,
-              "title": "$M\\xi = M\\eta$"
+              "title": "$A_{52}^8$"
             },
             {
               "index": 4,
-              "title": "Неможливо порівняти $M\\xi, M\\eta$"
+              "title": "$C_{44}^4$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Випадкові величини $\\xi$, $\\eta$ та $\\varsigma$ мають рівномірний розподіл  відповідно на інтервалах $[0,1][1,2][2,3]$. Яке з наведених тверджень вірне:",
+          "question": "Скількома способами із повної колоди карт ($4\\cdot13$) можна витягнути $5$ карт однієї масті",
           "index": 60,
           "answers": [
             {
               "index": 1,
-              "title": "$D\\xi = D\\eta = D\\varsigma$"
+              "title": "$C_4^1 \\cdot C_{13}^5$"
             },
             {
               "index": 2,
-              "title": "$D\\xi > D\\eta > D\\varsigma$"
+              "title": "$4A_{13}^5$"
             },
             {
               "index": 3,
-              "title": "$ D\\xi < D\\eta < D\\varsigma$"
+              "title": "$A_{13}^5$"
             },
             {
               "index": 4,
-              "title": "Неможливо порівняти $D\\xi, D\\eta. D\\varsigma$"
+              "title": "$C_{13}^5$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Bипадкові величини $\\xi$, $\\eta$ мають пуасонівський розподіл  з параметрами $\\lambda$ і $\\mu$ відповідно $(\\lambda < \\mu)$. Яке з наведених тверджень невірне:",
+          "question": "Серед наведених формул знайти рівносильну до $p\\ q$",
           "index": 61,
           "answers": [
             {
               "index": 1,
-              "title": "$M\\eta < M\\xi = D\\eta$"
+              "title": "$\\rceil p \\cup q$"
             },
             {
               "index": 2,
-              "title": "$M\\xi < M\\eta = D\\eta$"
+              "title": "$q\\Rarr p$"
             },
             {
               "index": 3,
-              "title": "$M\\xi < D\\eta = M\\eta$"
+              "title": "$p\\Leftrightarrow q$"
             },
             {
               "index": 4,
-              "title": "$D\\xi < D\\eta = M\\eta$"
+              "title": "$\\rceil p\\Leftrightarrow \\rceil q$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Випадкова величина $\\xi$ має пуасонівський розподіл. Яке з наведених тверджень вірне?",
+          "question": "Серед наведених формул знайти рівносильну до $p\\Leftrightarrow q$",
           "index": 62,
           "answers": [
             {
               "index": 1,
-              "title": "$M\\xi = D\\xi$"
+              "title": "$\\rceil p \\Leftrightarrow  \\rceil q $"
             },
             {
               "index": 2,
-              "title": "$M\\xi < D\\xi$"
+              "title": "$p\\Rarr q$"
             },
             {
               "index": 3,
-              "title": "$M\\xi > D\\xi$"
+              "title": "$p \\cup q$"
             },
             {
               "index": 4,
-              "title": "Неможливо порівняти $M\\xi,D\\xi$"
+              "title": "$p\\cap q$"
             }
           ],
           "checked": true
         },
         {
-          "question": "Випадкові величини $\\xi$, $\\eta$ та $\\varsigma$ мають щільності розподілу відповідно $f_{\\xi}(x)=\\frac{1}{\\sqrt{2\\pi}}e^{-\\frac{(x-1)^2}{2}}, f_{\\eta}(x)=\\frac{1}{\\sqrt{2\\pi}}e^{-\\frac{(x-2)^2}{2}}, f_{\\varsigma}(x)=\\frac{1}{\\sqrt{2\\pi}}e^{-\\frac{(x-3)^2}{2}}$. Яке з наведених тверджень не вірне?",
+          "question": "Серед наведених формул знайти рівносильну до $\\rceil(p\\cap q)$",
           "index": 63,
           "answers": [
             {
               "index": 1,
-              "title": "$M\\eta<М\\varsigma=D\\varsigma$"
+              "title": "$\\rceil p \\cup \\rceil q$"
             },
             {
               "index": 2,
-              "title": "$D\\xi=М\\xi<М\\eta$"
+              "title": "$p \\cup q$"
             },
             {
               "index": 3,
-              "title": "$D\\xi=D\\eta=D\\varsigma$"
+              "title": "$\\rceil p\\cap \\rceil q$"
             },
             {
               "index": 4,
-              "title": "$М\\xi<М\\eta<М\\varsigma$"
+              "title": "$p\\cap q$"
+            }
+          ],
+          "checked": true
+        },
+        {
+          "question": "Серед наведених формул знайти рівносильну до $\\rceil (p \\cup q)$",
+          "index": 64,
+          "answers": [
+            {
+              "index": 1,
+              "title": "$\\rceil p \\cup \\rceil q$"
+            },
+            {
+              "index": 2,
+              "title": "$p \\cup q$"
+            },
+            {
+              "index": 3,
+              "title": "$\\rceil p\\cap \\rceil q$"
+            },
+            {
+              "index": 4,
+              "title": "$p\\cap q$"
+            }
+          ],
+          "checked": true
+        },
+        {
+          "question": "Серед наведених формул знайти рівносильну до $\\overline{p\\rArr q}$",
+          "index": 65,
+          "answers": [
+            {
+              "index": 1,
+              "title": "$ p \\cap \\rceil q$"
+            },
+            {
+              "index": 2,
+              "title": "$\\rceil p \\cup \\rceil q$"
+            },
+            {
+              "index": 3,
+              "title": "$q\\Rarr p$"
+            },
+            {
+              "index": 4,
+              "title": "$p\\cup q$"
+            }
+          ],
+          "checked": true
+        },
+        {
+          "question": "Серед наведених формул знайти рівносильну до $p\\oplus q$",
+          "index": 66,
+          "answers": [
+            {
+              "index": 1,
+              "title": "$\\rceil p\\oplus   \\rceil q$"
+            },
+            {
+              "index": 2,
+              "title": "$p\\cap q$"
+            },
+            {
+              "index": 3,
+              "title": "$p\\Rarr q$"
+            },
+            {
+              "index": 4,
+              "title": "$p\\Leftrightarrow q$"
+            }
+          ],
+          "checked": true
+        },
+        {
+          "question": "Серед наведених формул знайти рівносильну до $\\rceil(p\\oplus q )$",
+          "index": 67,
+          "answers": [
+            {
+              "index": 1,
+              "title": "$p\\Leftrightarrow q$"
+            },
+            {
+              "index": 2,
+              "title": "$p\\cap q$"
+            },
+            {
+              "index": 3,
+              "title": "$\\rceil p \\oplus  \\rceil q$"
+            },
+            {
+              "index": 4,
+              "title": "$p\\Rarr q$"
+            }
+          ],
+          "checked": true
+        },
+        {
+          "question": "Серед наведених формул знайти тоточну одиницю",
+          "index": 68,
+          "answers": [
+            {
+              "index": 1,
+              "title": "$(p \\cup q)\\Leftrightarrow (q \\cup p)$"
+            },
+            {
+              "index": 2,
+              "title": "$(p \\cup q)\\Leftrightarrow (\\rceil p \\cup \\rceil q)$"
+            },
+            {
+              "index": 3,
+              "title": "$(\\rceil p\\cap \\rceil q)\\Leftrightarrow p$"
+            },
+            {
+              "index": 4,
+              "title": "$(\\rceil p \\cup \\rceil q)\\Leftrightarrow q$"
+            }
+          ],
+          "checked": true
+        },
+        {
+          "question": "Серед наведених формул знайти тоточну одиницю",
+          "index": 69,
+          "answers": [
+            {
+              "index": 1,
+              "title": "$(p\\cap q)\\Leftrightarrow (q\\cap p)$"
+            },
+            {
+              "index": 2,
+              "title": "$(p\\cap q)\\Leftrightarrow p$"
+            },
+            {
+              "index": 3,
+              "title": "$p\\cap q\\Leftrightarrow q$"
+            },
+            {
+              "index": 4,
+              "title": "$\\rceil p\\Rarr p$"
+            }
+          ],
+          "checked": true
+        },
+        {
+          "question": "Серед наведених формул знайти тоточній нуль",
+          "index": 70,
+          "answers": [
+            {
+              "index": 1,
+              "title": "$(p\\cap q)\\Leftrightarrow (\\rceil q \\cup \\rceil p)$"
+            },
+            {
+              "index": 2,
+              "title": "$(p\\cap q)\\Leftrightarrow (q\\cap p)$"
+            },
+            {
+              "index": 3,
+              "title": "$\\rceil(p\\cap q )\\Leftrightarrow (\\rceil q \\cup \\rceil p)$"
+            },
+            {
+              "index": 4,
+              "title": "$(p\\cap p)\\Rarr p$"
             }
           ],
           "checked": true
